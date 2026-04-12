@@ -1,42 +1,141 @@
 <!DOCTYPE html>
 <html lang="ur">
+  <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#050505;color:#fff;scroll-behavior:smooth}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 80px;position:sticky;top:0;background:#050505}
-nav a{color:#fff;margin-left:30px;text-decoration:none;font-size:14px;transition:.3s}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  position:sticky;
+  top:0;
+  background:#050505;
+}
+
+.logo-text{
+  font-family:'Brush Script MT',cursive;
+  font-size:32px;
+  color:#00ff99;
+  letter-spacing:3px;
+  text-shadow:0 0 10px #00ff99,0 0 20px #00ff99;
+}
+
+nav a{color:#fff;margin-left:30px;text-decoration:none;transition:.3s}
 nav a:hover{color:#00ff99}
+
 section{padding:80px}
-.hero{display:flex;align-items:center;justify-content:space-between}
+
+.hero{display:flex;justify-content:space-between;align-items:center}
 .hero-text h1{font-size:48px;color:#00ff99}
 .hero-text p{margin-top:15px;color:#aaa}
-.btn{margin-top:20px;padding:12px 25px;background:transparent;border:1px solid #00ff99;border-radius:6px;color:#00ff99;cursor:pointer;transition:.3s}
-.btn:hover{background:#00ff99;color:#000}
-.hero-img{width:280px;height:280px;border-radius:50%;border:3px solid #00ff99;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
-.hero-img img{width:100%;height:100%;object-fit:cover;border-radius:50%}
-.urdu-name{margin-top:10px;font-family:'Noto Nastaliq Urdu',serif;font-size:18px;color:#00ff99;text-align:center}
-.cards{display:flex;gap:20px;margin-top:40px;flex-wrap:wrap}
-.card{flex:1;min-width:250px;background:#0c0c0c;padding:30px;border-radius:12px;border:1px solid #1a1a1a;transition:.3s}
-.card:hover{border-color:#00ff99;box-shadow:0 0 20px #00ff99;transform:translateY(-5px)}
-h2{margin-bottom:20px}
-footer{text-align:center;padding:30px;color:#888;border-top:1px solid #111}
-.contact p{margin:10px 0;color:#ccc}
-.social-icons{margin-top:20px}
-.social-icons a{margin-right:15px;color:#00ff99;font-size:20px;text-decoration:none}
-.logo-text{
-  font-family: 'Brush Script MT', cursive;
-  font-size:30px;
+
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  border:1px solid #00ff99;
+  background:transparent;
   color:#00ff99;
-  letter-spacing:2px;
+  border-radius:6px;
+  cursor:pointer;
+}
+.btn:hover{background:#00ff99;color:#000}
+
+.hero-img{
+  width:280px;height:280px;border-radius:50%;
+  border:3px solid #00ff99;overflow:hidden;
+  box-shadow:0 0 25px #00ff99;
+}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+
+.urdu-name{
+  text-align:center;margin-top:10px;
+  font-family:'Noto Nastaliq Urdu';color:#00ff99;
+}
+
+.cards{display:flex;flex-wrap:wrap;gap:20px;margin-top:40px}
+.card{
+  flex:1;min-width:250px;background:#0c0c0c;
+  padding:30px;border-radius:12px;border:1px solid #1a1a1a;
+  transition:.3s;
+}
+.card:hover{
+  border-color:#00ff99;
+  box-shadow:0 0 20px #00ff99;
+  transform:translateY(-5px);
+}
+
+h2{margin-bottom:20px}
+
+.lang,.profession{cursor:pointer}
+.lang:hover,.profession:hover{color:#00ff99;transform:scale(1.1)}
+
+.contact p{margin:10px 0;color:#ccc}
+
+/* 🔥 SOCIAL ICONS */
+.social-icons a{
+  margin-right:15px;
+  color:#00ff99;
+  text-decoration:none;
+  transition:.3s;
+}
+.social-icons a:hover{
+  color:red;
+  transform:scale(1.3);
+  text-shadow:0 0 3px red;
+}
+
+/* FORM */
+.contact-form{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.contact-form input{
+  padding:10px;
+  background:#0c0c0c;
+  border:1px solid #00ff99;
+  color:#fff;
+  width:280px;
+}
+
+
+.contact-form button{
+  width: 50px;
+  background:rgb(247, 170, 3);
+  color:#110303;
+  border:none;
+  padding:10px 10px;
+  border-radius:20px;
+  cursor:pointer;
+}
+.contact-form button:hover{
+  background:#ff4d4d;
+  box-shadow:0 2px red;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  border-top:1px solid #111;
+  color:#888;
 }
 </style>
 </head>
+
 <body>
+
 <header>
   <div class="logo-text">Sardar Hammad Munir</div>
   <nav>
@@ -49,47 +148,47 @@ footer{text-align:center;padding:30px;color:#888;border-top:1px solid #111}
 
 <section id="home" class="hero">
   <div class="hero-text">
-    <h1>Full-Stack<br>Developer</h1>
-    <p>Full-stack developer creating secure, modern web<br> experiences with strong cyber system expertise.</p>
+    <h1>Full-Stack <br> Developer</h1>
+    <p>Full-stack developer creating secure, modern web<br>
+experiences with strong cyber system expertise.</p>
     <button class="btn" onclick="scrollToSection('contact')">Let's Connect</button>
   </div>
+
   <div>
     <div class="hero-img">
-      <img src="Hammad .jpeg" alt="profile">
+      <img src="Hammad.jpeg" alt="profile">
     </div>
     <div class="urdu-name">سردار حماد منیر</div>
-  </div>
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
   <div class="cards">
-    <div class="card" onclick="openLink('https://youtube.com/@qariaqib?si=DmIKjP8yRB0gf0PY')"> 
-      <h3>Languages</h3>
-      <p> Arabic , English , Persian</p>
-    </div>
-
-
-
-    <div class="card" onclick="openLink('https://youtube.com/@apnacollegeofficial?si=0dclWof1YOYJjXC2')">
-      <h3>Web Development</h3>
-      <p>Full Stack Web Developer</p>
-    </div>
-    <div class="card" onclick="openLink('https://www.facebook.com/share/1As1sj9vnZ/')">
-      <h3>Creative Field</h3>
-      <p>Student (Poet)</p>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="cards">
     <div class="card">
-      <h3>Portfolio Project</h3>
-      <p>This is my portfolio project.</p>
-      <button class="btn" onclick="openProject()">View Project</button>
+      <h3>Languages</h3>
+      <p>
+        <span class="lang" onclick="openLink('ENGLISH')">English</span>,
+        <span class="lang" onclick="openLink('ARABIC')">Arabic</span>,
+        <span class="lang" onclick="openLink('PERSIAN')">Persian</span>,<br>
+        <span class="lang" onclick="openLink('URDU')">Urdu</span> ,
+        <span class="lang" onclick="openLink('HINDKO')">Hindko</span>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>
+      <span class="Web Development" onclick="openLink('Web Development')">Full Stack Developer</span>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Profession</h3>
+      <p>
+        <span class="profession" onclick="openLink('Student')">Student</span> 
+        <span class="profession" onclick="openLink('Poet')">(Poet)</span>
+      </p>
     </div>
   </div>
 </section>
@@ -98,31 +197,67 @@ footer{text-align:center;padding:30px;color:#888;border-top:1px solid #111}
   <h2>Contact</h2>
   <p><strong>Phone:</strong> 03425392316</p>
   <p><strong>Address:</strong> Abbottabad</p>
-  <p><strong>Profession:</strong> Student (Poet)</p>
+  <p> <strong>Profession:</strong> Student</p>
 
+  
   <div class="social-icons">
-    <a href="https://www.tiktok.com/@hamii5551?_r=1&_t=ZS-95KuxGAos5t">TikTok</a>
-    <a href="https://youtube.com/@hammadmunir_10?si=4kllNYJXDXlQQt0s">YouTube</a>
-    <a href="https://www.facebook.com/share/1CyB69KUaQ/">Facebook</a>
-    <a href="#">LinkedIn</a>
-    <a href="https://www.rekhta.org/poets/sardar-hammad-munir/all?lang=ur">Rekhta</a>
+    <a href="https://www.tiktok.com/@hamii5551?_r=1&_t=ZS-95KuxGAos5t" target="_blank">TikTok</a>
+    <a href="https://youtube.com/@hammadmunir_10?si=4kllNYJXDXlQQt0s" target="_blank">YouTube</a>
+    <a href="https://www.facebook.com/share/1CyB69KUaQ/" target="_blank">Facebook</a>
+    <a href="#" target="_blank">LinkedIn</a>
+    <a href="https://www.rekhta.org/poets/sardar-hammad-munir/all?lang=ur" target="_blank">Rekhta</a>
   </div>
+<br>
+<br>
+  <form class="contact-form">
+   <h3><p>Contect Us</p></h3> 
+    <input type="text" placeholder="Please enter your Name" required>
+    <input type="text" placeholder="Please enter your Phone Number" required>
+    <input type="text" placeholder="Please enter your Address" required>
+    <button type="submit">Go</button>
+  </form>
 </section>
 
 <footer>
-  © 2026 Sardar Hammad Munir. All rights reserved.
+  © 2026 Sardar Hammad Munir
 </footer>
 
 <script>
 function scrollToSection(id){
   document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
-function openLink(url){
-  window.open(url,'_blank');
-}
 
-function openProject(){
-  window.open('https://your-portfolio-link.com','_blank');
+function openLink(type){
+  if(type === 'URDU'){
+    window.open("https://www.rekhta.org/", "_blank");
+  }
+  else if(type === 'ENGLISH'){
+    window.open("https://youtube.com/@spokenenglishguru?si=zDuKHBfeLZNa9K1K", "_blank");
+  }
+  else if(type === 'ARABIC'){
+    window.open("https://youtube.com/@qariaqib?si=Or0PSKlpRnO9uvAo", "_blank");
+  }
+  else if(type === 'PERSIAN'){
+    window.open("https://youtube.com/@usamasarsari?si=pAJxTdJQT3qQzCtm", "_blank");
+  }
+  else if(type === 'HINDKO'){
+    window.open("https://youtube.com/@aaprihindko?si=nrqmuNPDsIRsX3a7", "_blank");
+  }
+  else if(type === 'URDU'){
+    window.open("Source: Rekhta https://share.google/qc6BT9XXRDua9fxx1", "_blank");
+  }
+  else if(type === 'Web Development'){
+    window.open("https://youtube.com/@apnacollegeofficial?si=_tyxZzla5tR1r5Q7", "_blank");
+  }
+  else if(type === 'Student'){
+    window.open("https://www.facebook.com/share/1DXXdBCKGx/", "_blank");
+  }
+  else if(type === 'Poet'){
+    window.open("https://www.facebook.com/groups/645365108515315/?ref=share&mibextid=NSMWBT", "_blank");
+  }
+  else{
+    alert(type);
+  }
 }
 </script>
 
